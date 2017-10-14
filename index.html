@@ -60,6 +60,7 @@ a:link, a:active, a:visited {
 a:hover{
     text-decoration: underline;
 }
+
         </style>
 <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
 </head>
@@ -87,12 +88,43 @@ a:hover{
     
     <font style ="font-size:20px;"><b><u>O B J E C T I V E</u></b></font>
     <br><br>
-    <font style ="font-size:14px; text-align: left;">Create a web app to help introverted programmers find love.</font>
+    <b>Create a web app to help introverted programmers find love.</b>
     <br><br><br>
         
     <table class = "bottomtable">
       <th></th>
        <th>
+        <center>
+        <font style ="font-size:20px;"><b><u>P I C K - U P &nbsp; L I N E &nbsp; G E N E R A T O R</u></u></b></font>
+        <br><br>
+        <button onclick="myFunction()">&#9829;&#9829;&#9829;</button>
+          
+          <p id="demo"></p>
+          
+          <script>
+          function myFunction() {
+              var greeting;
+              var x = Math.floor((Math.random() * 7) + 1);
+              if (x == 1) {
+                  greeting = "Is your name Google? Because you have everything I've been searching for.";
+              } else if (x == 2) {
+                  greeting = "You had me at Hello World.";
+              } else if (x == 3) {
+                  greeting = "Hi, my name's Microsoft. Can I crash at your place tonight?";
+              } else if (x == 4) {
+                  greeting = "You've stolen the ASCII to my heart.";
+              } else if (x == 5) {
+                  greeting = "Be the hard drive of my dreams.";
+              } else if (x == 6) {
+                  greeting = "What’s a nice girl like you doing in a chat room like this?";
+              } else {
+                  greeting = "If you were a part of my domain, we could share cookies.";
+              }
+          document.getElementById("demo").innerHTML = greeting;
+          }
+          </script>
+          
+        </center>
         <br><br>
         <center>
         <font style ="font-size:20px;"><b><u>N O W &nbsp; L E T'S &nbsp; M A T C H &nbsp; Y O U!!!</u></b></font>
