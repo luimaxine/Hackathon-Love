@@ -58,7 +58,7 @@ a:link, a:active, a:visited {
 }
 
 a:hover{
-    text-decoration: line-through;
+    text-decoration: underline;
 }
         </style>
 <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
@@ -114,18 +114,52 @@ a:hover{
             <input type="checkbox" id="OtherLanguage">Other <br>
           </form>
           <br>
-          <form id = "secondForm">
-            Gender:<br>
-            <input type="checkbox" id="male">Male <br>
-            <input type="checkbox" id="female">Female <br>
-            <input type="checkbox" id="other">Other <br>
-          </form>
           
-          <br><br><br>
+          Gender:<br>
+        <input type="radio" name="gender" id = "male" value="male"> Male<br>
+        <input type="radio" name="gender" id = "female" value="female"> Female<br>
+        <input type="radio" name="gender" id = "both" value="both"> Both<br>
+        <input type="radio" name="gender" id = "other" value="other"> Other<br>
+          
           <center>
-          <a href="Fake Bio.html"><button type="button">Find My L&#9829;ve</button></a>
-          <br><br>
+            <br>
+          <button id ="nextButton" location.href = ''>Find My L&#9829;ve</Button>
           </center>
+          
+        <script type="text/javascript">
+          var radio = document.getElementsByName("gender")
+          var button = document.getElementById("nextButton")
+          button.disabled = true
+          button.addEventListener("click",redirect)
+          var i = 0;
+          for (i=0; i<5; i++)
+          {
+            radio[i].addEventListener("change", enable)
+          }
+          function enable()
+          {
+            button.disabled = false
+          }
+          function redirect()
+          {
+            if(radio[0].checked == true)
+            {
+              window.location.replace("Female Fake Bio.html");
+            }
+            else if(radio[1].checked == true)
+            {
+              window.location.replace("Male Fake Bio.html");
+            }
+            else if(radio[2].checked == true)
+            {
+              window.location.replace("Both Fake Bio.html");
+            }
+            else
+            {
+              window.location.replace("Other Fake Bio.html");
+            }
+          }
+        </script>
         </font>
         </th>
       <th></th>
