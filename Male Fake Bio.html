@@ -59,12 +59,15 @@ a:link, a:active, a:visited {
 
 a:hover{
     text-decoration: underline;
+<<<<<<< HEAD
 }
 
 .yay {
   display:inline;
+=======
+>>>>>>> 02fbc9fa42d1ad02ce3f70729c6119f603b16aea
 }
-        </style>
+ </style>
 <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
 </head>
 
@@ -95,17 +98,32 @@ a:hover{
     
     <font style ="font-size:20px;"><b><u>Y O U &nbsp; A R E &nbsp; M A T C H E D &nbsp; W I T H:</u></b></font>
     <br><br>
+<<<<<<< HEAD
     <img id = "image" src="both1.jpg" width ="300px"><br>
     <p id = "name"><b></b></p>
+=======
+    <img src="" id = "image" width ="300px"><br>
+    <p id = "name"><b>Will Kpop Park</b></p>
+>>>>>>> 02fbc9fa42d1ad02ce3f70729c6119f603b16aea
     
     <table class = "bottomtable">
       <th></th>
       <th>
+<<<<<<< HEAD
         <b>Age: </b><p class = "yay" id = "age"></p> <br><br>
         <b>Location: </b><p class = "yay" id = "local"></p><br><br>
         <b>Coder Pick-up Line: </b><p class = "yay" id = "line"></p><br>
         <br>
         <center><button onclick = "ref()" >Find Another Soul Mate</button></center>
+=======
+        <center>
+        <b>Age</b>
+        <p id = "age">0</p>
+        </center>
+        <b>Location</b>: Hackathon in Seoul, South Korea <br><br>
+        <b>Coder Pick-up Line</b>: "Is your name Wi-fi? Because I'm really feeling a connection." <br>
+        <button id = "refreshButton" location.href = ''>Find Another Soul Mate</button>
+>>>>>>> 02fbc9fa42d1ad02ce3f70729c6119f603b16aea
       </th>
       <th></th>
     </table>
@@ -158,6 +176,63 @@ a:hover{
     
     </script>
     </center>
+    
+    <script>
+    var namelist = [
+      "Anish Donepudi",
+      "Arjun Loganathan",
+      "Nikhil Mandava",
+      "Sabarno Islam",
+      "Fabe Swann",
+      "Spence Lofaro",
+      "Barnebas Treverton",
+      "Ab Bedford",
+      "Beauregard Eggleston",
+      "Barnett Lunt",
+      "Tedmund Behenna",
+      "Dallon Ryder"
+    ]
+    var imagelist = [
+      "http://wilhacks.com/images/event/anish2.png",
+      "http://wilhacks.com/images/event/arjun2.jpg",
+      "http://wilhacks.com/images/event/nikhil4.jpg",
+      "http://wilhacks.com/images/event/sabarno3.jpg",
+      "https://hackclub.com/staticPage/team/max_wofford.jpg"
+    ]
+    
+    var imagelistLength = imagelist.length
+    var randomNumImage = getRandomArbitrary(0,imagelistLength);
+    var chosenImage = imagelist[randomNumImage]
+    var displayedImage = document.getElementById("image") 
+    displayedImage.src = chosenImage
+    
+    var listLength = namelist.length
+    var randomNumName = getRandomArbitrary(0,listLength);
+    var chosenName = namelist[randomNumName]
+    var displayedname = document.getElementById("name")
+    
+    var displayedage = document.getElementById("age")
+    var randomAge = getRandomArbitrary(14,19)
+    displayedage.innerHTML = randomAge
+    
+    var button = document.getElementById("refreshButton")
+    button.addEventListener("click",redirect)
+    displayedname.innerHTML = chosenName
+    
+     function getRandomArbitrary(min, max)
+    {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    function redirect()
+    {
+      window.location.replace("Male Fake Bio.html");
+    }
+    
+    </script>
+    
+    </script>
     <!--<img src="titlebig.png" width = "600px"> -->
 
   
