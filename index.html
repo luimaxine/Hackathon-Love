@@ -12,35 +12,29 @@
 	font-weight: 500;
 	line-height: 15.4px;
 }
-
 .toptable {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
 }
-
 .toptable td, .toptable th {
     border: 1px solid #dddddd;
     text-align: middle;
     padding: 8px;
 }
-
 .toptable th:hover{background-color:#f5f5f5}
-
 .bottomtable {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
 }
-
 .bottomtable td, .bottomtable th {
     border: 1px solid #FFFFFF;
     text-align: left;
     padding: 8px;
 }
-
 body {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	font-size: 15px;
@@ -49,18 +43,15 @@ body {
 	font-weight: 500;
 	line-height: 15.4px;
 }
-
 a:link, a:active, a:visited {
   text-decoration: none; color: #000000;
   -moz-transition: 0.3s  ease-in;
   -webkit-transition: 0.3s ease-in; -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
-
 a:hover{
     text-decoration: underline;
 }
-
         </style>
 <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
 </head>
@@ -99,10 +90,10 @@ a:hover{
         <br><br>
         <button onclick="myFunction()">&#9829;&#9829;&#9829;</button>
           
-          <p id="demo"></p>
+          <p id="pickUpLine"></p>
           
           <script>
-          function myFunction() {
+          /*function myFunction() {
               var greeting;
               var x = Math.floor((Math.random() * 7) + 1);
               if (x == 1) {
@@ -121,6 +112,36 @@ a:hover{
                   greeting = "If you were a part of my domain, we could share cookies.";
               }
           document.getElementById("demo").innerHTML = greeting;
+          }*/
+          
+          function myFunction()
+          {
+            var list = 
+            [
+              "Is your name Google? Because you have everything I've been searching for.",
+              "You had me at Hello World.",
+              "Hi, my name's Microsoft. Can I crash at your place tonight?",
+              "You've stolen the ASCII to my heart.",
+              "Be the hard drive of my dreams.",
+              "What’s a nice girl like you doing in a chat room like this?",
+              "If you were a part of my domain, we could share cookies.",
+              "q",
+              "a",
+              "b",
+              "c",
+              "d",
+            ]
+            var listLength = list.length
+            var randomNum = getRandomArbitrary(0,listLength);
+            var chosenline = list[randomNum]
+            var line = document.getElementById("pickUpLine")
+            line.innerHTML = chosenline
+            function getRandomArbitrary(min, max)
+            {
+              min = Math.ceil(min);
+              max = Math.floor(max);
+              return Math.floor(Math.random() * (max - min)) + min;
+            }
           }
           </script>
           
