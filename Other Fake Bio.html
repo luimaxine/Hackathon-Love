@@ -16,12 +16,12 @@
 .toptable {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 75%;
     table-layout: fixed;
 }
 
 .toptable td, .toptable th {
-    border: 1px solid #dddddd;
+    border: 1px solid #FFFFFF;
     text-align: middle;
     padding: 8px;
 }
@@ -29,8 +29,9 @@
 .toptable th:hover{background-color:#f5f5f5}
 
 .bottomtable {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 75%;
     table-layout: fixed;
 }
 
@@ -59,13 +60,24 @@ a:link, a:active, a:visited {
 a:hover{
     text-decoration: underline;
 }
+
+.yay {
+  display:inline;
+}
         </style>
 <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
 </head>
 
 <body>
-  <br><br>
+  <br>
   <center>
+    <table class = "toptable">
+      <th><a href="Our Team.html">O U R &nbsp; T E A M</a></th>
+      <th><a href="index.html">M A I N &nbsp; P A G E</a></th>
+      <th><a href="Contact.html">C O N T A C T</a></th>
+    </table>
+    <br>
+     <hr width ="75%">
     <div id = "title">
       <b><font style="background-color:#7cc9cf; color:white; font-size: 15px;">&nbsp;WILHACKS OCT 2K17&nbsp;</font></b>
       <br><br><br><br><br>
@@ -74,77 +86,78 @@ a:hover{
       <b><font style="color:#f59378; font-size: 15px; letter-spacing:2px;">TEAM SIXERS</font></b>
     </div>
     
-    <br><br>
+    <br>
     
-    <table class = "toptable">
-      <th><a href="Our Team.html">O U R &nbsp; T E A M</a></th>
-      <th><a href="index.html">M A I N &nbsp; P A G E</a></th>
-      <th><a href="Contact.html">C O N T A C T</a></th>
-    </table>
+    <hr width ="75%">
     
     <br><br>
+    <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
     
     <font style ="font-size:20px;"><b><u>Y O U &nbsp; A R E &nbsp; M A T C H E D &nbsp; W I T H:</u></b></font>
     <br><br>
-    <img src="other1.png" width ="300px"><br>
-    <p id = "name"><b>Orpheus HackClub</b></p>
+    <img id = "image" src="both1.jpg" width ="300px"><br>
+    <p id = "name"><b></b></p>
     
     <table class = "bottomtable">
       <th></th>
       <th>
-        <b>Age</b>
-        <p id = "age">0</p>
-        <b>Location</b>: Hackathon in Outer Space <br><br>
-        <b>Coder Pick-up Line</b>: "Trust me, I'm user friendly." <br>
+        <b>Age: </b><p class = "yay" id = "age"></p> <br><br>
+        <b>Location: </b><p class = "yay" id = "local"></p><br><br>
+        <b>Coder Pick-up Line: </b><p class = "yay" id = "line"></p><br>
+        <br>
+        <center><button onclick = "ref()" >Find Another Soul Mate</button></center>
       </th>
       <th></th>
     </table>
-    </center>
+    <script type ="text/javascript">
     
+    function ref() {
+      window.location.reload();
+    }
     
+    var male1 = {
+      picture: "https://img00.deviantart.net/8b86/i/2015/250/6/d/balrog_by_pvproject-d7bylw3.jpg",
+      name: "Deepak Prabhu",
+      age: "17",
+      location1: "Hogwart",
+      line: "Are you a magician? Because whenever I look at you everyone else disappears."
+    }
     
-    <script>
+    var female1 = {
+      picture: "http://digitalspyuk.cdnds.net/15/30/980x490/landscape_fivenightsatfreddy-1.jpg",
+      name: "Donatus Damon",
+      age: "15",
+      location1: "Boston, Massachusetts",
+      line: "You look like my mom!"
+    }
     
-    
-    var list = [
-      "Ernust Angus",
-      "Deepak Prabhu",
-      "Rhett Marinus",
-      "Venceslao Kenneth",
-      "Kiril Mani",
-      "Anaiah Cecilio",
-      "Deo Suhail",
-      "Zohar Arieh",
-      "Pranav Gerry",
-      "Donatus Damon",
-      "Odilo Pancho",
-      "Wolfgang Dani"
-    ]
-    var listLength = list.length
-    var randomNum = getRandomArbitrary(0,listLength);
-    var chosenName = list[randomNum]
-    var displayedname = document.getElementById("name")
-    
-    var displayedage = document.getElementById("age")
-    var randomAge = getRandomArbitrary(14,19)
-    displayedage.innerHTML = randomAge
-    
-    
-    displayedname.innerHTML = chosenName
-   
-    function getRandomArbitrary(min, max)
-    {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min;
+    var anime1 = {
+      picture: "https://ichef-1.bbci.co.uk/news/660/cpsprodpb/14C52/production/_92847058_c3c1256f-1f69-45fe-ade5-a1822e3d9b9c.jpg",
+      name: "Wolfgang Dani",
+      age: "19",
+      location1: "Hidden Village of Leaf",
+      line: "Roses are red, violets are blue, lava is hot and so are you."
     }
     
     
+      var people = [male1,female1,anime1];
+      var number = Math.floor((Math.random()*people.length))+0;
+      var person = people[number];
+      var picture = person.picture;
+      var name = person.name;
+      var age = person.age;
+      var location3 = person.location1;
+      var line = person.line;
+      document.getElementById('name').innerHTML = name;
+      document.getElementById('age').innerHTML = age;
+      document.getElementById('local').innerHTML = location3;
+      document.getElementById('line').innerHTML = line;
+      document.getElementById('image').src = picture;
+    
+    //Assigning value
     
     </script>
-    
-    
-    </script>
+    </center>
     <!--<img src="titlebig.png" width = "600px"> -->
 
   
