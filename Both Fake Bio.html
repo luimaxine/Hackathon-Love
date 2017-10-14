@@ -83,21 +83,64 @@ a:hover{
     </table>
     
     <br><br>
+    <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
     
     <font style ="font-size:20px;"><b><u>Y O U &nbsp; A R E &nbsp; M A T C H E D &nbsp; W I T H:</u></b></font>
     <br><br>
     <img src="both1.jpg" width ="300px"><br>
-    <p><b>Queen Latifah</b></p>
+    <p id = "name"><b>Queen Latifah</b></p>
     
     <table class = "bottomtable">
       <th></th>
       <th>
-        <b>Age</b>: 19 <br><br>
-        <b>Location</b>: Hackathon at San Jose, California <br><br>
-        <b>Coder Pick-up Line</b>: "My love is a for loop without the increment operator: infinitive, non-terminating, and difficult to stop once it starts running." <br>
+        <b id = "age">Age</b>: 19 <br><br>
+        <b id = "local">Location</b> Hackathon at San Jose, California <br><br>
+        <b id = "line">Coder Pick-up Line</b>: "My love is a for loop without the increment operator: infinitive, non-terminating, and difficult to stop once it starts running."<br>
       </th>
       <th></th>
     </table>
+    <script type ="text/javascript">
+    
+    var male1 = {
+      picture: "https://images.pottermore.com/bxd3o8b291gf/3SQ3X2km8wkQIsQWa02yOY/25f258f21bdbe5f552a4419bb775f4f0/HarryPotter_WB_F4_HarryPotterMidshot_Promo_080615_Port.jpg?w=1200",
+      name: "Harry Potter",
+      age: "17",
+      location1: "Hogwart",
+      line: "Are you a magician? Because whenever I look at you everyone else disappears."
+    }
+    
+    var female1 = {
+      picture: "http://freedesignfile.com/upload/2017/01/A-young-female-student-sitting-at-the-desk-HD-picture.jpg",
+      name: "Vanessa Huntsman",
+      age: "15",
+      location1: "Boston, Massachusetts",
+      line: "You look like my mom!"
+    }
+    
+    var anime1 = {
+      picture: "https://i.ytimg.com/vi/oJwO7IEdcxQ/hqdefault.jpg",
+      name: "Sasuke Uchiha",
+      age: "19",
+      location1: "Hidden Village of Leaf",
+      line: "Roses are red, violets are blue, lava is hot and so are you."
+    }
+    
+    var people = [male1,female1,anime1];
+      var number = Math.floor(Math.random(0,people.length));
+      var person = people[number];
+      var picture = person.picture;
+      var name = person.name;
+      var age = person.age;
+      var location3 = person.location1;
+      var line = person.line;
+      document.getElementById('name').innerHTML = name;
+      document.getElementById('age').innerHTML = age;
+      document.getElementById('local').innerHTML = location3;
+      document.getElementById('line').innerHTML = line;
+    
+    //Assigning value
+    
+    </script>
     </center>
     <!--<img src="titlebig.png" width = "600px"> -->
 
