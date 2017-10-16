@@ -86,15 +86,19 @@ a:hover{
     
     <font style ="font-size:20px;"><b><u>Y O U &nbsp; A R E &nbsp; M A T C H E D &nbsp; W I T H:</u></b></font>
     <br><br>
-    <img src="fem1.jpg" width ="300px"><br>
-    <p><b>Sarah Wilcox</b></p>
+    <img src="" id = "image" width ="300px"><br>
+    <p id = "name"><b>Sarah Wilcox</b></p>
     
     <table class = "bottomtable">
       <th></th>
       <th>
-        <b>Age</b>: 15 <br><br>
+        <center>
+        <b>Age</b>
+        <p id = "age">0</p>
+        </center>
         <b>Location</b>: Hackathon in San Jose, California <br><br>
         <b>Coder Pick-up Line</b>: "Are you a keyboard? Because you're my type!" <br>
+        <button id = "refreshButton" location.href = ''>Find Another Soul Mate</button>
       </th>
       <th></th>
     </table>
@@ -109,13 +113,50 @@ a:hover{
         "Lily Hernandez",
         "Miley Grylls",
         "Kaitlin Ramsy",
-        "Vanessa Rivera",
+        "Vanessa Smith",
         "Ariana Grande"
         
         ]
       var imagelist = [
-        
+        "https://metrouk2.files.wordpress.com/2017/08/pri_48957260.jpg",
+        "https://i.pinimg.com/736x/50/68/84/50688400d9d6f6b105d155adeb5e8530--laneya-grace-girl-next-door.jpg",
+        "http://ksassets.timeincuk.net/wp/uploads/sites/55/2017/09/Cash-Me-Outside-920x584.jpg",
+        "http://jonvilma.com/images/girl-2.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRovRAQ-RGpHC6JtRg3e-B5BRx_kFs-MmeHUGmgIkZ9TmkhUdlS7w",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_7PbRvKvoISq2mqr-emCqFH9bF63hWtEIe3sf8mxtArkL1kPf",
+        "http://data.whicdn.com/images/251646372/superthumb.jpg"
         ]
+        
+        
+      var imagelistLength = imagelist.length
+    var randomNumImage = getRandomArbitrary(0,imagelistLength);
+    var chosenImage = imagelist[randomNumImage]
+    var displayedImage = document.getElementById("image") 
+    displayedImage.src = chosenImage
+    
+    var listLength = namelist.length
+    var randomNumName = getRandomArbitrary(0,listLength);
+    var chosenName = namelist[randomNumName]
+    var displayedname = document.getElementById("name")
+    
+    var displayedage = document.getElementById("age")
+    var randomAge = getRandomArbitrary(14,19)
+    displayedage.innerHTML = randomAge
+    
+    var button = document.getElementById("refreshButton")
+    button.addEventListener("click",redirect)
+    displayedname.innerHTML = chosenName
+   
+    function getRandomArbitrary(min, max)
+    {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    function redirect()
+    {
+      window.location.replace("Female Fake Bio.html");
+    }  
     </script>
     <!--<img src="titlebig.png" width = "600px"> -->
 
