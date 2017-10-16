@@ -16,12 +16,12 @@
 .toptable {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 75%;
     table-layout: fixed;
 }
 
 .toptable td, .toptable th {
-    border: 1px solid #dddddd;
+    border: 1px solid #FFFFFF;
     text-align: middle;
     padding: 8px;
 }
@@ -29,8 +29,9 @@
 .toptable th:hover{background-color:#f5f5f5}
 
 .bottomtable {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 75%;
     table-layout: fixed;
 }
 
@@ -59,14 +60,26 @@ a:link, a:active, a:visited {
 a:hover{
     text-decoration: underline;
 }
- </style>
+
+.yay {
+  display:inline;
+}
+        </style>
 <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
 </head>
 
 <body>
-  <br><br>
+  <br>
   <center>
+    <table class = "toptable">
+      <th><a href="Our Team.html">O U R &nbsp; T E A M</a></th>
+      <th><a href="index.html">M A I N &nbsp; P A G E</a></th>
+      <th><a href="Contact.html">C O N T A C T</a></th>
+    </table>
+    <br>
+     <hr width ="75%">
     <div id = "title">
+      <br>
       <b><font style="background-color:#7cc9cf; color:white; font-size: 15px;">&nbsp;WILHACKS OCT 2K17&nbsp;</font></b>
       <br><br><br><br><br>
       <b>HACKATHON L<font color="red">&#9829;</font>VE</b>
@@ -74,92 +87,80 @@ a:hover{
       <b><font style="color:#f59378; font-size: 15px; letter-spacing:2px;">TEAM SIXERS</font></b>
     </div>
     
-    <br><br>
+    <br>
     
-    <table class = "toptable">
-      <th><a href="Our Team.html">O U R &nbsp; T E A M</a></th>
-      <th><a href="index.html">M A I N &nbsp; P A G E</a></th>
-      <th><a href="Contact.html">C O N T A C T</a></th>
-    </table>
+    <hr width ="75%">
     
     <br><br>
+    <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?3a688ae593c44d77f77872fdc33a20ad"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
     
     <font style ="font-size:20px;"><b><u>Y O U &nbsp; A R E &nbsp; M A T C H E D &nbsp; W I T H:</u></b></font>
     <br><br>
-    <img src="" id = "image" width ="300px"><br>
-    <p id = "name"><b>Will Kpop Park</b></p>
+    <img id = "image" src="both1.jpg" width ="300px"><br>
+    <p id = "name"><b></b></p>
     
     <table class = "bottomtable">
       <th></th>
       <th>
-        <center>
-        <b>Age</b>
-        <p id = "age">0</p>
-        </center>
-        <b>Location</b>: Hackathon in Seoul, South Korea <br><br>
-        <b>Coder Pick-up Line</b>: "Is your name Wi-fi? Because I'm really feeling a connection." <br>
-        <button id = "refreshButton" location.href = ''>Find Another Soul Mate</button>
+        <b>Age: </b><p class = "yay" id = "age"></p> <br><br>
+        <b>Location: </b><p class = "yay" id = "local"></p><br><br>
+        <b>Coder Pick-up Line: </b><p class = "yay" id = "line"></p><br>
+        <br>
+        <center><button onclick = "ref()" >Find Another Soul Mate</button></center>
       </th>
       <th></th>
     </table>
+    <script type ="text/javascript">
+    
+    function ref() {
+      window.location.reload();
+    }
+    
+    var male1 = {
+      picture: "https://hackclub.com/staticPage/team/max_wofford.jpg",
+      name: "Max the Mentor",
+      age: "unknown",
+      location1: "Cafeteria",
+      line: "Are you coding God?"
+    }
+    
+    var female1 = {
+      picture: "http://wilhacks.com/images/event/anish2.png",
+      name: "Anish Donepudi",
+      age: "18",
+      location1: "Underground",
+      line: "I'm an expert at Firebird."
+    }
+    
+    var anime1 = {
+      picture: "http://wilhacks.com/images/event/arjun2.jpg",
+      name: "Arjun Loganathan",
+      age: "19",
+      location1: "In a Sleeping Bag",
+      line: "Roses are red, violets are blue, Arjun can code better than you."
+    }
+    
+    
+      var people = [male1,female1,anime1];
+      var number = Math.floor((Math.random()*people.length))+0;
+      var person = people[number];
+      var picture = person.picture;
+      var name = person.name;
+      var age = person.age;
+      var location3 = person.location1;
+      var line = person.line;
+      document.getElementById('name').innerHTML = name;
+      document.getElementById('age').innerHTML = age;
+      document.getElementById('local').innerHTML = location3;
+      document.getElementById('line').innerHTML = line;
+      document.getElementById('image').src = picture;
+    
+    //Assigning value
+    
+    </script>
+    <br><br>
+    <p>Copyright &#9400;Sixers 2017</p>
     </center>
-    
-    <script>
-    var namelist = [
-      "Anish Donepudi",
-      "Arjun Loganathan",
-      "Nikhil Mandava",
-      "Sabarno Islam",
-      "Fabe Swann",
-      "Spence Lofaro",
-      "Barnebas Treverton",
-      "Ab Bedford",
-      "Beauregard Eggleston",
-      "Barnett Lunt",
-      "Tedmund Behenna",
-      "Dallon Ryder"
-    ]
-    var imagelist = [
-      "http://wilhacks.com/images/event/anish2.png",
-      "http://wilhacks.com/images/event/arjun2.jpg",
-      "http://wilhacks.com/images/event/nikhil4.jpg",
-      "http://wilhacks.com/images/event/sabarno3.jpg",
-      "https://hackclub.com/staticPage/team/max_wofford.jpg"
-    ]
-    
-    var imagelistLength = imagelist.length
-    var randomNumImage = getRandomArbitrary(0,imagelistLength);
-    var chosenImage = imagelist[randomNumImage]
-    var displayedImage = document.getElementById("image") 
-    displayedImage.src = chosenImage
-    
-    var listLength = namelist.length
-    var randomNumName = getRandomArbitrary(0,listLength);
-    var chosenName = namelist[randomNumName]
-    var displayedname = document.getElementById("name")
-    
-    var displayedage = document.getElementById("age")
-    var randomAge = getRandomArbitrary(14,19)
-    displayedage.innerHTML = randomAge
-    
-    var button = document.getElementById("refreshButton")
-    button.addEventListener("click",redirect)
-    displayedname.innerHTML = chosenName
-    
-     function getRandomArbitrary(min, max)
-    {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
-    function redirect()
-    {
-      window.location.replace("Male Fake Bio.html");
-    }
-    
-    </script>
-    
-    </script>
     <!--<img src="titlebig.png" width = "600px"> -->
 
   
